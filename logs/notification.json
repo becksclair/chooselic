@@ -1,0 +1,44 @@
+[
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use repomix - attach_packed_output (MCP)"
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude Code needs your approval for the plan"
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude Code needs your approval for the plan"
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude Code needs your approval for the plan"
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "hook_event_name": "Notification",
+    "message": "Claude Code needs your approval for the plan"
+  }
+]

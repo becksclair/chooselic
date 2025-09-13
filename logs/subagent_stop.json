@@ -1,0 +1,18 @@
+[
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "c12c42a1-3c6f-4a79-bae6-86e1502ceec5",
+    "transcript_path": "/home/rebecca/.claude/projects/-home-rebecca-projects-chooselic/c12c42a1-3c6f-4a79-bae6-86e1502ceec5.jsonl",
+    "cwd": "/home/rebecca/projects/chooselic",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  }
+]
