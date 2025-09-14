@@ -4,3 +4,4 @@ htmldocs/
 
 ./chooselic
 chooselic
+.claude/settings.local.json
