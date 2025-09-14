@@ -84,3 +84,4 @@ task quality, "Run comprehensive quality checks (build + test + demo)":
   exec "nimble test"
   exec "nimble demo"
   echo "✅ All quality checks passed!"
+

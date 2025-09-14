@@ -60,8 +60,13 @@ proc runInteractiveMode(args: CliArgs, client: HttpClient, licenses: seq[License
     var appData = initAppData(licenses, args.author, args.year)
 
     if not runInteractiveTUI(appData):
+      # Clear screen after TUI exit for cancelled selection
+      clearScreen()
       echo "License selection cancelled."
       return false
+
+    # Clear screen after TUI exit for clean output
+    clearScreen()
 
     # Fetch and process the selected license
     echo fmt"Fetching license '{appData.selectedLicense.key}'..."

@@ -96,8 +96,8 @@ proc runInteractiveTUI*(app: var AppData): bool =
       tb.write(2, 8, fmt"{yearIndicator} Year: ", yearColor)
       tb.write(10, 8, app.year, yearColor)
 
-    # License list (only show if we have a search query or no active license)
-    if app.searchQuery.len > 0 or not app.licenseSelected:
+    # License list (only show when search field is active and we have a query or no license selected)
+    if app.activeField == searchField and (app.searchQuery.len > 0 or not app.licenseSelected):
       let matches = fuzzyMatch(app.searchQuery, app.licenses)
       tb.write(2, 10, fmt"Found {matches.len} licenses:", fgYellow)
 
@@ -196,4 +196,9 @@ proc getTextInput*(prompt: string, defaultValue: string = ""): string =
   result = readLine(stdin).strip()
   if result.len == 0:
     result = defaultValue
+
+proc clearScreen*() =
+  ## Clear the terminal screen and move cursor to home position
+  ## Used after exiting TUI mode for clean output
+  stdout.write("\x1b[2J\x1b[H")
 
