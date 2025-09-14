@@ -1,5 +1,5 @@
 import std/[parseopt, strformat, times, os]
-import config
+import config, author
 
 type
   CliArgs* = object
@@ -37,11 +37,12 @@ proc showVersion*() =
 
 proc parseCliArgs*(): CliArgs =
   result = CliArgs(
+    author: getSystemAuthor(),  # Auto-detect author from system
     year: $now().year,
     interactive: true
   )
 
-  var parser = initOptParser(commandLineParams())
+  var parser = initOptParser(commandLineParams(), shortNoVal = {'h', 'v'}, longNoVal = @["help", "version"])
 
   while true:
     parser.next()
@@ -51,12 +52,42 @@ proc parseCliArgs*(): CliArgs =
     of cmdShortOption, cmdLongOption:
       case parser.key
       of "license", "l":
-        result.license = parser.val
+        var value = parser.val
+        if value.len == 0:
+          # Space-separated value - peek ahead for the next argument
+          parser.next()
+          if parser.kind == cmdArgument:
+            value = parser.key
+          else:
+            echo "Error: --license requires a value (e.g., --license MIT or --license=MIT)"
+            echo "Use --help for usage information."
+            quit(1)
+        result.license = value
         result.interactive = false
       of "author", "a":
-        result.author = parser.val
+        var value = parser.val
+        if value.len == 0:
+          # Space-separated value - peek ahead for the next argument
+          parser.next()
+          if parser.kind == cmdArgument:
+            value = parser.key
+          else:
+            echo "Error: --author requires a value (e.g., --author \"John Doe\" or --author=\"John Doe\")"
+            echo "Use --help for usage information."
+            quit(1)
+        result.author = value
       of "year", "y":
-        result.year = parser.val
+        var value = parser.val
+        if value.len == 0:
+          # Space-separated value - peek ahead for the next argument
+          parser.next()
+          if parser.kind == cmdArgument:
+            value = parser.key
+          else:
+            echo "Error: --year requires a value (e.g., --year 2025 or --year=2025)"
+            echo "Use --help for usage information."
+            quit(1)
+        result.year = value
       of "help", "h":
         result.help = true
       of "version", "v":
