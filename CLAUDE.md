@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Building
 ```bash
-nimble build          # Development build with SSL (default)
-nimble build_release  # Optimized production build
-nimble build_debug    # Debug build with symbols
+nimble build          # Development build (SSL enabled via config.nims)
+nimble -d:release build  # Optimized production build
+nimble -d:debug build    # Debug build with symbols
 ```
 
 ### Testing
@@ -19,6 +19,7 @@ nimble quality        # Full quality checks: clean + build_release + test + demo
 
 ### Development Workflow
 ```bash
+nimble install        # Install chooselic to ~/.nimble/bin/
 nimble dev_setup      # Complete setup: install deps + build + test + demo
 nimble demo           # Multi-license demonstration with SSL and --no-ssl modes
 nimble clean          # Remove build artifacts
@@ -26,10 +27,10 @@ nimble clean          # Remove build artifacts
 
 ### Individual Test Modules
 ```bash
-nim c -d:ssl -r tests/test_licenses.nim  # Test license template processing
-nim c -d:ssl -r tests/test_fuzzy.nim     # Test fuzzy search algorithm
-nim c -d:ssl -r tests/test_cli.nim       # Test CLI argument parsing
-nim c -d:ssl -r tests/test_cache.nim     # Test caching system
+nim c -r tests/test_licenses.nim  # Test license template processing
+nim c -r tests/test_fuzzy.nim     # Test fuzzy search algorithm
+nim c -r tests/test_cli.nim       # Test CLI argument parsing
+nim c -r tests/test_cache.nim     # Test caching system
 ```
 
 ## Architecture Overview
